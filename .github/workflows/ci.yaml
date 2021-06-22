@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: docker-login
-        run: echo docker login -u ${username} -p ${{secrets.SANTANDER_DOCKERCOINS}}
       - name: build-hasher
         run: docker image build --file hasher/Dockerfile --tag index.docker.io/machacamoya/santander-dockercoins:test-hasher hasher/
       - name: build-rng
