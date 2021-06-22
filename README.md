@@ -1,4 +1,5 @@
 # santander-dockercoins
+[![ci](https://github.com/machacamoya/santander-dockercoins/actions/workflows/ci.yaml/badge.svg?branch=2021-06)](https://github.com/machacamoya/santander-dockercoins/actions/workflows/ci.yaml)
 ```
 docker image build --file hasher/Dockerfile --tag index.docker.io/machacamoya/santander-dockercoins:test-hasher hasher/
 docker image build --file rng/Dockerfile --tag index.docker.io/machacamoya/santander-dockercoins:test-rng rng/
