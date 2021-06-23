@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: santander-dockercoins-woker
+        app: santander-dockercoins-worker
     spec:
       containers:
         - name: santander-dockercoins-worker-container
@@ -25,7 +25,7 @@ spec:
               readOnly: true
           workingDir: /src/
       initContainers:
-        - name: santander-dockercoins-woker-initcontainer
+        - name: santander-dockercoins-worker-initcontainer
           args:
             - -c
             - cd /src/; git clone https://github.com/machacamoya/santander-dockercoins; cd santander-dockercoins; git checkout 2021-06; cp worker/worker.py /src/; rm -rf /src/santander-dockercoins 
@@ -37,5 +37,5 @@ spec:
               name: santander-dockercoins-worker-volume
               readOnly: false
       volumes:
-        - name: santander-dockercoins-woker-volume
+        - name: santander-dockercoins-worker-volume
           emptyDir: {}
